@@ -1,8 +1,8 @@
-import string
-input_str = input("Enter the String : ")
-def remove_punctuation(input_string):
-    translator = str.maketrans('', '', string.punctuation)
-    return input_string.translate(translator)
+word = input("Enter a String : ")
+symbol = "`~!@#$%^&*()_-=+{}[]\|;:',<.>/?"
 
-clean_str = remove_punctuation(input_str)
-print(clean_str)
+for i in word:
+    if i in symbol:
+        word = word.replace(i, "")
+        
+print(word)
